@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512T+zJW/Otb+lA3BY3H+nA+FGJgSiEIMKyFOMKH1bUMcEylZ9mWYKjINsckx51s4sfn4ya8d/7BjKkplnnyTJZvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+    <title>EfficiStudy</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="https://www.instagram.com/hy_learns/">Contact</a></li>
+        <li class="login"><a href="#" id="login-btn" onclick="openLoginPopup()"><i class="fas fa-lock"></i> Login</a></li>
+      </ul>
+    </div>
+    
+      <div id="login-popup" class="login-popup">
+        <form id="login-form" class="login-form" onsubmit="return login()">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" value="admin" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" value="studysmart!" required>
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    <div class="hidden">
+      <div class="note-container">
+        <div class="note-header">New Mugg</div>
+        <div class="note-content">
+  <form method="POST" action="/">
+    <div class="input-group">
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" placeholder="Enter subject"/>
+    </div>
+    <div class="input-group">
+      <label for="duration">Duration:</label>
+      <input type="number" id="duration" name="duration" placeholder="Enter duration (in minutes)"/>
+    </div>
+    <div class="button-group">
+      <button type="submit">Create</button>
+    </div>
+  </form>
+  
+        </div>
+      </div>
+      <div class="notes">
+        <h2>Activity</h2>
+        {% for note in notes %}
+          <div class="note-item">
+            <div class="note-subject">{{ note[0] }}</div>
+            <div class="note-duration">{{ note[1] }} min</div>
+          </div>
+        {% endfor %}
+      </div>
+  
+  	</div>
+  </div>
+  </body>
+</html>

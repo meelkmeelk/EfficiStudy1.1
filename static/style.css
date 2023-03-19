@@ -1,0 +1,207 @@
+/* CSS for navbar */
+.navbar {
+  overflow: hidden;
+  background-color: salmon;
+  border-radius: 30px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li:last-child {
+  float: right;
+}
+
+.navbar a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar .login {
+  float: right;
+  padding-right: 20px;
+}
+
+/* loginmenu */
+
+.login-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.login-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196F3;
+  color: white;
+  cursor: pointer;
+}
+ .note-container {
+        position: relative;
+        width: 300px;
+        height: 225px;
+        background-color: #FFF2CC;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        overflow: hidden;
+        top: 15px;
+        left: 5px;
+      }
+
+      .note-header {
+        height: 50px;
+        background-color: #FFD966;
+        padding: 10px;
+        border-bottom: 1px solid #BFBFBF;
+        font-weight: bold;
+        font-size: 27px;
+        color: #333333;
+        box-sizing: border-box;
+      }
+      
+      .note-content {
+        height: 200px;
+        padding: 10px;
+        color: #333333;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+      
+      .note-footer {
+        height: 50px;
+        background-color: #FFD966;
+        padding: 10px;
+        border-top: 1px solid #BFBFBF;
+        box-sizing: border-box;
+      }
+      
+      .input-group {
+        margin-bottom: 10px;
+      }
+      
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333333;
+        font-weight: bold;
+        font-size: 14px;
+      }
+      
+      .input-group input[type="text"], 
+      .input-group input[type="number"] {
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #BFBFBF;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      
+      .button-group {
+        text-align: right;
+      }
+      
+      .button-group button {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #333333;
+        color: #FFFFFF;
+        font-size: 16px;
+        cursor: pointer;
+      }
+/* CSS for the notes column */
+.notes {
+  position: fixed;
+  top: 70px;
+  right: 10px;
+  bottom: 0;
+  width: 150px; /* Adjust this value as needed */
+  background-color: #f1f1f1; /* Change background color as needed */
+  overflow-y: auto; /* Add scrollbars if the content exceeds the height */
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Style for each note item */
+.note-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the note subject */
+.note-subject {
+  font-weight: bold;
+}
+
+/* Style for the note duration */
+.note-duration {
+  color: #999;
+}
+@media only screen and (max-width: 767px) {
+  .notes {
+    top: auto;
+    bottom: 0;
+    width: 90%;
+    height: 150px; /* Adjust this value as needed */
+    border-radius: 0;
+  }
+}
+.hidden {
+  display: none;
+}
