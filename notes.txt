@@ -1,2 +1,7 @@
-
-MUGGGer, 543
+Computing, 60
+Chemistry, 60
+Economics, 60
+General Paper, 80
+Economics, 12
+Mathematics, 30
+Mathematics, 120

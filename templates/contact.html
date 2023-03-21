@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='contact.css') }}">
+    <script src="{{ url_for('static', filename='contact.js') }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form method="POST" action="{{ url_for('contact_submit') }}">
+            <label for="feedback">Feedback(Do add your contact details if you want to be acknowledged):</label>
+            <textarea id="feedback" name="feedback"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

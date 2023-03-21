@@ -1,4 +1,4 @@
-/* CSS for navbar */
+/*Navigation Bar*/
 .navbar {
   overflow: hidden;
   background-color: salmon;
@@ -38,7 +38,16 @@
   padding-right: 20px;
 }
 
-/* loginmenu */
+.navname {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+}
+
+/*Login Menu*/
 
 .login-popup {
   display: none;
@@ -89,80 +98,80 @@
   cursor: pointer;
 }
  .note-container {
-        position: relative;
-        width: 300px;
-        height: 225px;
-        background-color: #FFF2CC;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        border-radius: 10px;
-        overflow: hidden;
-        top: 15px;
-        left: 5px;
-      }
+  position: relative;
+  width: 300px;
+  height: 225px;
+  background-color: #FFF2CC;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  top: 15px;
+  left: 5px;
+}
 
-      .note-header {
-        height: 50px;
-        background-color: #FFD966;
-        padding: 10px;
-        border-bottom: 1px solid #BFBFBF;
-        font-weight: bold;
-        font-size: 27px;
-        color: #333333;
+ .note-header {
+  height: 50px;
+  background-color: #FFD966;
+  padding: 10px;
+  border-bottom: 1px solid #BFBFBF;
+  font-weight: bold;
+  font-size: 27px;
+  color: #333333;
         box-sizing: border-box;
-      }
+}
       
-      .note-content {
-        height: 200px;
-        padding: 10px;
-        color: #333333;
-        font-size: 16px;
-        box-sizing: border-box;
-      }
+.note-content {
+  height: 200px;
+  padding: 10px;
+  color: #333333;
+  font-size: 16px;
+  box-sizing: border-box;
+}
       
-      .note-footer {
-        height: 50px;
-        background-color: #FFD966;
-        padding: 10px;
-        border-top: 1px solid #BFBFBF;
-        box-sizing: border-box;
-      }
+.note-footer {
+  height: 50px;
+  background-color: #FFD966;
+  padding: 10px;
+  border-top: 1px solid #BFBFBF;
+  box-sizing: border-box;
+}
       
-      .input-group {
-        margin-bottom: 10px;
-      }
+.input-group {
+  margin-bottom: 10px;
+}
       
-      .input-group label {
-        display: block;
-        margin-bottom: 5px;
-        color: #333333;
-        font-weight: bold;
-        font-size: 14px;
-      }
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 14px;
+}
       
-      .input-group input[type="text"], 
-      .input-group input[type="number"] {
-        width: 100%;
-        padding: 5px;
-        border-radius: 5px;
-        border: 1px solid #BFBFBF;
-        box-sizing: border-box;
-        font-size: 16px;
-      }
+.input-group input[type="text"], 
+.input-group input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #BFBFBF;
+  box-sizing: border-box;
+  font-size: 16px;
+}
       
-      .button-group {
-        text-align: right;
-      }
+.button-group {
+  text-align: right;
+}
       
-      .button-group button {
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        background-color: #333333;
-        color: #FFFFFF;
-        font-size: 16px;
-        cursor: pointer;
-      }
-/* CSS for the notes column */
+.button-group button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*Inputs on Subject and Duration*/
 .notes {
   position: fixed;
   top: 70px;
@@ -204,4 +213,29 @@
 }
 .hidden {
   display: none;
+}
+.message {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 5px;
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 10px;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message p:first-of-type {
+  font-weight: bold;
+}
+
+.message p:last-of-type {
+  margin-top: 5px;
+}
+.foto {
+  float: right;
+  margin-right: 25%;
+  margin-top: 2%;
 }

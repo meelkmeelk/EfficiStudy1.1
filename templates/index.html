@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512T+zJW/Otb+lA3BY3H+nA+FGJgSiEIMKyFOMKH1bUMcEylZ9mWYKjINsckx51s4sfn4ya8d/7BjKkplnnyTJZvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     
     <title>EfficiStudy</title>
   </head>
@@ -13,7 +15,8 @@
     <div class="navbar">
       <ul>
         <li><a class="active" href="#">Home</a></li>
-        <li><a href="https://www.instagram.com/hy_learns/">Contact</a></li>
+        <li><a href="{{ url_for('newfile') }}" target="_blank">Contact</a></li>
+        <li class="navname">EfficiStudy</li>
         <li class="login"><a href="#" id="login-btn" onclick="openLoginPopup()"><i class="fas fa-lock"></i> Login</a></li>
       </ul>
     </div>
@@ -27,24 +30,27 @@
           <button type="submit">Login</button>
         </form>
       </div>
-    <div class="hidden">
+    
+     <div class="hidden">
+             <div class="foto">
+        <img src="https://i.redd.it/ef8c36aqdvq01.jpg">
+      </div>
       <div class="note-container">
         <div class="note-header">New Mugg</div>
-        <div class="note-content">
-  <form method="POST" action="/">
-    <div class="input-group">
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" placeholder="Enter subject"/>
-    </div>
-    <div class="input-group">
-      <label for="duration">Duration:</label>
-      <input type="number" id="duration" name="duration" placeholder="Enter duration (in minutes)"/>
-    </div>
-    <div class="button-group">
-      <button type="submit">Create</button>
-    </div>
-  </form>
-  
+          <div class="note-content">
+            <form method="POST" action="/">
+              <div class="input-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject"/>
+              </div>
+            <div class="input-group">
+              <label for="duration">Duration:</label>
+              <input type="number" id="duration" name="duration" placeholder="Enter duration (in minutes)"/>
+            </div>
+            <div class="button-group">
+              <button type="submit">Create</button>
+            </div>
+          </form>
         </div>
       </div>
       <div class="notes">
@@ -56,8 +62,23 @@
           </div>
         {% endfor %}
       </div>
-  
+      <div class="message">
+        <p> Aim for 1h per subject!</p>
+        <p>Total duration: {{ total_duration }}</p>
+        {% if not goal_met %}
+        <p>Goal not met</p>
+        {% else %}
+        <p>Good job!</p>
+        {% endif %}
+      </div>
+      <div class="quote">
+        <p>{{ random_quote }}</p>
+      </div>
+
+
   	</div>
   </div>
+        
+  
   </body>
 </html>
