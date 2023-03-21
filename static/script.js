@@ -37,3 +37,6 @@ function createNote() {
   document.getElementById("subject").value = "";
   document.getElementById("duration").value = "";
 }
+
+
+

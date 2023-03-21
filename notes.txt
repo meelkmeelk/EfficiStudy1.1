@@ -5,3 +5,9 @@ General Paper, 80
 Economics, 12
 Mathematics, 30
 Mathematics, 120
+General Paper, 2
+General Paper, 3
+Mathematics, 120
+General Paper, 120
+Chemistry, 10
+Mathematics, 240
